@@ -1,0 +1,34 @@
+{
+
+    "manifest_version": 2,
+    "name": "MHcode",
+    "version": "1.0",
+  
+    "description": "Gets the Minehut.com api keys.",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["https://*.minehut.com/*"],
+        "js": ["api.js"]
+      }
+    ],
+
+    "browser_action": {
+      "browser_style": true,
+      "default_icon": {
+        "48": "icons/border-48.png"
+      },
+      "default_title": "MHcode",
+      "default_popup": "index.html"
+    },
+
+    "permissions": [
+      "storage", "clipboardWrite"
+    ]
+  
+  }
+  
