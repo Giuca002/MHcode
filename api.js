@@ -15,8 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 async function main() {
     navigator.permissions.query({ name: 'clipboard-read' }).then(async result => {
         if (result.state === 'granted' || result.state === 'prompt') {
-            setTimeout(async()=>console.log(
-                await navigator.clipboard.writeText(window.localStorage.minehut_session_id)), 3000)
+            await navigator.clipboard.writeText(window.localStorage.minehut_session_id), 3000)
         }
     })
 }
